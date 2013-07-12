@@ -63,3 +63,7 @@ This takes a sender email as a string, a receiver email as either a string or a 
 **mailinator.register_handler(handler, *extensions)**
 
 It takes a file type handler and a bunch of extensions which it is supposed to handle and makes it so that it handles them. Easy peasy.
+
+**mailinator.template_folders**
+
+This is a list of template folders. You can replace it or modify it, but **you must do so before the first from_templates() call is made**.
