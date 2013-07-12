@@ -1,4 +1,4 @@
-Mailinaut: sending templated emails with ease
+Mailinaut
 ====
 
 Mailinaut is a small Python module designed to simplify sending templated multipart e-mails. Here's how it works: let's say we want to send our users a welcome e-mail. We store the different parts of the e-mail as separate files in our template folder, like this:
