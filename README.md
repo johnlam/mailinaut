@@ -7,7 +7,11 @@ templates/hello.html
 
 ```html
 <html><head></head><body>
+<<<<<<< HEAD
 	<p>Hello, {{ name }}. Welcome to the future.
+=======
+  <p>Hello, {{ name }}. Welcome to the future.
+>>>>>>> 9905dd3e10165af5bfb6f6c280eeca617e318a36
 </html></body>
 ```
 
@@ -62,4 +66,8 @@ This takes a sender email as a string, a receiver email as either a string or a 
 
 mailinator.register_handler(handler, *extensions)
 
+<<<<<<< HEAD
 It takes a file type handler and a bunch of extensions which it is supposed to handle and makes it so that it handles them. Easy peasy.
+=======
+It takes a file type handler and a bunch of extensions which it is supposed to handle and makes it so that it handles them. Easy peasy.
+>>>>>>> 9905dd3e10165af5bfb6f6c280eeca617e318a36
