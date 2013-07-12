@@ -3,6 +3,8 @@
 
 import jinja2
 
+from jinja2 import TemplateNotFound, TemplatesNotFound
+
 import smtplib
 
 try:                   # Python 2.7+
@@ -66,10 +68,10 @@ class Message(object):
 					template = environment.get_template(templates + '.' + 
 													    extension)
 					handlers.append(handler(template))
-				except jinja2.TemplateNotFound:
+				except TemplateNotFound:
 					pass
 			if not len(handlers):
-				raise jinja2.TemplatesNotFound((templates,))
+				raise TemplatesNotFound((templates,))
 		elif isinstance(templates, Iterator):
 			for name, extension in ((template, template.split('.')[-1]) 
 									for template in templates):
