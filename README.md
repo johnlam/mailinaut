@@ -46,13 +46,13 @@ Documentation?
 
 _But I'm le tired!_ Fiiine, here's an overview:
 
-** mailinator.from_templates(templates) **
+**mailinator.from_templates(templates)**
 
 This is an alias to mailinator.Message.from_templates, which is a class method. 
 It takes a string containing a filename without its extension or a list of strings containing filenames with extensions. The former looks for files with that name of known handled extensions, and raises a TemplatesNotFound error if no files are found. The latter looks for files with that name and extension, and raises a TemplateNotFound error if any of them are missing, or a HandlerNotFound error if there is no known handler for any or some of the files' extensions.
 It returns a Message object.
 
-** mailinator.Message.render(subject, context) **
+**mailinator.Message.render(subject, context)**
 
 This takes the subject of the e-mail as a string and the context for the template **as a dictionary** and renders the template accordingly. It returns nothing.
 
