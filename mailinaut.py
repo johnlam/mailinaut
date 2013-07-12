@@ -96,7 +96,7 @@ class Message(object):
 		self.message['From'] = _from
 		if isinstance(_to, str):
 			self.message['To'] = _to
-		elif isinstance(to, Iterator):
+		elif isinstance(_to, Iterator):
 			self.message['To'] = ', '.join(_to)
 		SMTP = smtplib.SMTP_SSL if ssl else smtplib.SMTP
 		config = {'host': 'localhost',
