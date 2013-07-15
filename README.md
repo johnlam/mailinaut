@@ -36,7 +36,7 @@ Right now? Not much. I've just started this. If you want to help, please serve y
 
 * Sending attachments (this one should be easy to beginners, methinks)
 * Hidden destinataries on sending
-* Rendering Markdown templates to HTML
+* ~~Rendering Markdown templates to HTML~~ *(thanks, [@seckenrode](github.com/seckenrode)!)*
 * Print money (one can only dream...)
 
 If you manage to do any of those, feel free to send me a pull request!
