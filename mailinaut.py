@@ -5,6 +5,8 @@ import jinja2
 
 from jinja2 import TemplateNotFound, TemplatesNotFound
 
+import markdown2
+
 import smtplib
 
 try:                   # Python 2.7+
@@ -29,6 +31,11 @@ class HTMLHandler(FiletypeHandler):
 	def render(self, context):
 		return MIMEText(self.template.render(**context), 'html')
 
+class MarkdownHandler(FiletypeHandler):
+    def render(self, context):
+        rendered = self.template.render(**context)
+        return MIMEText(markdown2.markdown(rendered), 'html')
+
 class HandlerNotFound(Exception):
 	pass
 
@@ -40,6 +47,7 @@ def register_handler(handler, *extensions):
 
 register_handler(TextHandler, 'txt')
 register_handler(HTMLHandler, 'htm', 'html')
+register_handler(MarkdownHandler, 'md')
 
 template_folders = ['templates']
 
